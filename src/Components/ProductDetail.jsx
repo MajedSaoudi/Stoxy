@@ -9,7 +9,7 @@ import Navbar from './Navbar';
 import { useCart } from './CartContext';
 import fav from '../Assets/images/Heart.jpg';
 import favblack from '../Assets/images/Heart.png';
-import star from '../Assets/images/star.png';
+
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from './Footer';
 

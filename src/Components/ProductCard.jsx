@@ -1,45 +1,46 @@
 import React, { useState, useRef } from 'react';
 
 function ProductCard({ product }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const sliderRef = useRef(null); 
-  const [startX, setStartX] = useState(0); 
-  const [isSwiping, setIsSwiping] = useState(false); 
 
+ 
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef(null);
+  const [startX, setStartX] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
   
-  const slideLeft = () => {
+  if (!product || !product.images || product.images.length === 0) {
+    return <div>No images available</div>;
+  }
+const slideLeft = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
   };
 
-
-  const slideRight = () => {
+const slideRight = () => {
     if (currentIndex < product.images.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-
-  const handleTouchStart = (e) => {
+const handleTouchStart = (e) => {
     setStartX(e.touches[0].clientX);
     setIsSwiping(true);
   };
 
- 
-  const handleTouchEnd = (e) => {
+  console.log(product);
+  console.log(product.images);
+const handleTouchEnd = (e) => {
     if (!isSwiping) return;
     setIsSwiping(false);
     const endX = e.changedTouches[0].clientX;
     const diff = startX - endX;
 
-   
     if (Math.abs(diff) > 50) {
       if (diff > 0 && currentIndex < product.images.length - 1) {
-       
         setCurrentIndex(currentIndex + 1);
       } else if (diff < 0 && currentIndex > 0) {
-     
         setCurrentIndex(currentIndex - 1);
       }
     }
@@ -54,7 +55,11 @@ function ProductCard({ product }) {
         onTouchEnd={handleTouchEnd}
       >
         <a href={`/product/${product.id}`}>
-          <img src={product.images[currentIndex]} alt={product.title} loading="lazy" />
+          <img
+            src={product.images[currentIndex] ?? 'default-image.jpg'}
+            alt={product.title}
+            loading="lazy"
+          />
         </a>
         <button className="left-slide" onClick={slideLeft}>
           <svg
