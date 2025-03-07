@@ -31,7 +31,7 @@ function Navbar({ backgroundColor }) {
   const [showsearch, setShowSearch] = useState(false);
   const [imageloaded, setImageIsloaded] = useState(false);
   const Product = useProducts();
- 
+
   function handleProfileClick() {
     setProfileIsOpened(!ProfileIsOpened);
     setShowSearch(false);
@@ -51,7 +51,7 @@ function Navbar({ backgroundColor }) {
 
   const [isVisible, setIsVisible] = useState(true);
   const prevScrollY = useRef(0);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -59,15 +59,15 @@ function Navbar({ backgroundColor }) {
       if (currentScrollY > prevScrollY.current) {
 
         setIsVisible(false);
-      } else  {
+      } else {
 
         setIsVisible(true);
-      } 
-     
-    
-     
+      }
+
+
+
       prevScrollY.current = currentScrollY;
-     
+
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -90,7 +90,7 @@ function Navbar({ backgroundColor }) {
   function handleinputchange(e) {
     setSearched(e.target.value);
   }
-  
+
 
   const SearchedProduct = Product.filter((item) => {
     const cleanedSearchTerm = searched.toLowerCase().replace(/\s+/g, '');
@@ -108,12 +108,13 @@ function Navbar({ backgroundColor }) {
       <div className='Header' style={{
         transition: "transform 0.3s ease-in-out",
         transform: isVisible ? "translateY(0)" : "translateY(-100%)",
-        backgroundColor: backgroundColor ||  'white' ,
+        backgroundColor: backgroundColor || 'white',
       }}>
         <div className='Container'>
 
           <div className='Categories'>
-            <div className="checkbtn" onClick={() => {setIsOpen(!isOpen);
+            <div className="checkbtn" onClick={() => {
+              setIsOpen(!isOpen);
               setChartIsOpen(false);
               setShowSearch(false);
             }}>
@@ -178,7 +179,7 @@ function Navbar({ backgroundColor }) {
 
             <div className='Profile-container' >
               <img src={profile} alt="Profile Icon" onClick={() => handleProfileClick()} className='Default-profile' />
-            
+
             </div>
           </div>
         </div>
@@ -194,28 +195,30 @@ function Navbar({ backgroundColor }) {
           <div className='chart-product'>
 
             {cartcontent.length > 0 ? (
-              cartcontent.map((product, index) =>
-                <div className='cart-item' key={index}>
-                  <div className='cart-item-details'>
-                    <img src={product.images[0]} alt='' className='cart-item-image' />
-                    <div className='cart-item-info'>
-                      <h4>{product.title}</h4>
-                      <b>Price: {product.amount * product.price}$</b>
+              cartcontent.map((product, index) => {
+                // Check if product.images exists and is not empty
+                if (!product.images || product.images.length === 0) {
+                  return null; // Skip rendering this product
+                }
 
-
+                return (
+                  <div className='cart-item' key={index}>
+                    <div className='cart-item-details'>
+                      <img src={product.images[0]} alt='' className='cart-item-image' />
+                      <div className='cart-item-info'>
+                        <h4>{product.title}</h4>
+                        <b>Price: {product.amount * product.price}$</b>
+                      </div>
                     </div>
-
+                    <div className='remove-container'>
+                      <img src={Remove} className='Trash-png' onClick={() => RemoveFromCart(product.id)} />
+                    </div>
                   </div>
-                  <div className='remove-container'>
-                    <img src={Remove} className='Trash-png' onClick={() => RemoveFromCart(product.id)} />
-                  </div>
-
-                </div>
-              ))
-              : (
-                <p>No items in the cart.</p>
-
-              )}
+                );
+              })
+            ) : (
+              <p>No items in the cart.</p>
+            )}
           </div>
 
         </div>
@@ -314,31 +317,31 @@ function Navbar({ backgroundColor }) {
         <a onClick={() => setIsOpen(false)} href='/Contact'>Contact</a>
       </div>
       <div className={`Profile-Dropdown ${ProfileIsOpened ? 'show' : ''}`}>
-                <div>
+        <div>
 
-                  {isAuthenticated && (
-                    <>
-                      <div className='Profile-Data'>
+          {isAuthenticated && (
+            <>
+              <div className='Profile-Data'>
 
-                        <div className='Profile-image'>
-                          <img src={user.picture} onLoad={() => setImageIsloaded(true)} />
-                          {!imageloaded && <div className='profile-image-loading skeleton'></div>}
-                        </div>
-
-                      </div>
-                      <div className='Profile-Name'>
-                        <h2>{user.name.substring(0, 12)}</h2>
-
-                      </div>
-                    </>
-                  )
-
-                  }
-                  <div className='Auth-btn'>
-                    {!isAuthenticated ? <LoginButton /> : <LogoutButton />}
-                  </div>
+                <div className='Profile-image'>
+                  <img src={user.picture} onLoad={() => setImageIsloaded(true)} />
+                  {!imageloaded && <div className='profile-image-loading skeleton'></div>}
                 </div>
+
               </div>
+              <div className='Profile-Name'>
+                <h2>{user.name.substring(0, 12)}</h2>
+
+              </div>
+            </>
+          )
+
+          }
+          <div className='Auth-btn'>
+            {!isAuthenticated ? <LoginButton /> : <LogoutButton />}
+          </div>
+        </div>
+      </div>
     </div>
 
   )

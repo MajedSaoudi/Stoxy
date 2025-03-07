@@ -408,7 +408,11 @@ export function Shop() {
 
             <div className="Products-container">
               <div className="Product-card-container">
-                {currentItems.map((product, index) => (
+                {currentItems.map((product, index) => {
+                  if(!product.images || product.images.length ===0){
+                    return null;
+                  }
+                  return(
                   <div key={index} className="Product-Card">
                     <div className='Product-image'>
                       <Link to={`/product/${product.id}`} onClick={() => {
@@ -437,7 +441,8 @@ export function Shop() {
                     )}
                  
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 

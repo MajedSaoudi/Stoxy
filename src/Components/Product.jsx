@@ -35,7 +35,11 @@ export default function Product(){
 
   return (
     <div className='Product'>
-    {products.map((product) => (
+    {products.map((product) => {
+      if(!product.images || product.images.length === 0){
+        return null;
+      } 
+      return (
       <div key={product.id} className='Product-Container'>
         <div className='Product-Card'>
         <div><Link to={`/product/${product.id}`}><img src={product.images[0]} alt={product.title} /></Link></div>
@@ -43,7 +47,8 @@ export default function Product(){
         <p>{product.price}$</p>
       </div>
       </div>
-    ))}
+      );
+    })}
   </div>
   )
 }

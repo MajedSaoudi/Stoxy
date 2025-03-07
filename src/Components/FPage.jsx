@@ -22,8 +22,11 @@ function FPage() {
         <div className="favourite-container">
           <div className="favourite-Product-card-container">
             {favouriteitems.length > 0 ? (
-              favouriteitems.map((item) => (
-                
+              favouriteitems.map((item) => {
+                if(!item.images || item.images.length === 0){
+                  return null;
+                }
+                return (
                 <div className="favourite-Card" key={item.id}>
                   <a href={`/Product/${item.id}`}>
                   <img src={item.images[0]} alt={item.title} /> 
@@ -32,8 +35,8 @@ function FPage() {
                   </a>
                   <button className="close-btn" onClick={() => RemoveFav(item.id)}>Remove</button>
                 </div>
-                
-              ))
+                );
+              })
             ) : (
               <div className="Choose-favourite">
                 <h2>Choose Your favourite product</h2>

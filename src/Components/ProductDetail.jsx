@@ -228,7 +228,11 @@ export default function ProductDetail() {
                     </div>
                     <div className='recommended-products'>
 
-                        {limitedProducts.map((product) => (
+                        {limitedProducts.map((product) => {
+                            if(!product.images || product.images.length === 0 ){
+                                return null;
+                            }
+                            return (
                             <>
                                 <div className='recommended-products-card'>
                                     <div>
@@ -248,7 +252,8 @@ export default function ProductDetail() {
                                     </div>
                                 </div>
                             </>
-                        ))}
+                            );
+                        })}
 
                     </div>
                 </div>
