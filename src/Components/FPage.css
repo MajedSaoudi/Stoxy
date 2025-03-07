@@ -1,0 +1,72 @@
+.favourite{
+    width: 100vw;
+}
+.favourite-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.favourite-Product-card-container{
+    display: grid
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(calc(300px - 12.5px), 1fr));
+        gap: 25px;
+        row-gap: 30px;
+        width: 1400px;
+        overflow: hidden;
+        padding: 15px;
+        box-sizing: border-box;
+}
+.favourite-Card{
+    
+    max-width: 500px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    font-family: 'afacad';
+    border-radius: 5px;
+  }
+  
+  
+  .favourite-Card h5{
+    font-family: 'afacad';
+    font-size: 22px;
+    letter-spacing: normal;
+    line-height: 50px;
+    text-transform: uppercase;
+    white-space: nowrap; 
+    overflow: hidden;   
+    max-width: 100%;
+  }
+  .recommended-products-card div{
+    max-width: 100%;
+  }
+  .favourite-Card p{
+    display: block;
+    font-family: "Poppins", "Poppins Placeholder",sans-serif ;
+    font-size: 20px;
+    font-weight:600;
+    line-height:32px;
+    color: rgb(0, 0, 0);
+  }
+  .favourite-Card h5:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .favourite-Card img{
+    background-color: #fff;
+    background-blend-mode: multiply;
+    min-height: 318px;
+    max-height: 500px;
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+  }
+ 
+
+  .Choose-favourite{
+    text-align: center;
+  }
+  .Choose-favourite h2{
+    font-family: 'afacad',sans-serif;
+
+  }

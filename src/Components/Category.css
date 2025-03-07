@@ -1,0 +1,107 @@
+.Category {
+   
+    width: 100vw;
+    
+    margin-bottom: 10px;
+    font-family: 'afcad',sans-serif;
+}
+
+.Home-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+   
+}
+
+.category-images-container {
+    display: grid;
+    width: 1488px;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 2.5%;
+    justify-content: center;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.category-images-container img {
+    position: relative;
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+.para{
+    display: flex;
+    justify-content: center;
+}
+.para h1{
+    font-family: 'afacad',sans-serif;
+    width: 1500px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 45px;
+}
+
+.category-images {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.category-names {
+    
+    position: absolute;
+    justify-content: space-between;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 10px; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.category-images-container a {
+    font-family: 'afacad';
+    text-decoration: none;
+    color: white;
+}
+
+.category-images:hover img {
+    transform: scale(1.15);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.category-images:hover .category-names {
+    opacity: 1; 
+}
+
+
+@media screen and (max-width: 1300px) {
+    .category-images-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        
+    }
+    .para h1{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 748px) {
+    .category-images-container {
+        height: max-content;
+        gap: 1%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .category-images-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1%;
+    }
+}

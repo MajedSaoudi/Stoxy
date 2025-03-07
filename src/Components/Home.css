@@ -1,0 +1,289 @@
+html{
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-display: swap;
+}
+
+
+.Home{
+     width: 100vw;
+     min-height: 100vh;
+     align-items: center;
+     display: flex;
+     margin-top: 10px;
+     justify-content: center;
+     
+}
+.Home h1{
+      font-size: 25px;
+     font-family: 'Montserrat';
+     font-weight: 600;
+}
+
+.Home-Container {
+      width:  1488px; 
+      height: 80vh;
+      display: flex;
+      gap: 5%;
+      background-color: #eae7dc;
+      max-height: 800px;
+      border-radius: 25px;
+      margin-left: 15px;
+      margin-right: 15px;
+      
+}
+
+.Home-par-container{
+      width: 45%;
+      display: flex;
+      align-items: center;
+      color: #333333;
+      font-family: 'afacad',sans-serif;
+      
+}
+
+.Home-par{
+      padding: 25px;
+      
+}
+.Heading{
+      font-family: 'Montserrat';
+      font-size: 50px;
+      line-height: 70px;
+      font-weight: 600;
+    
+
+}
+.Home-par h3{
+  color: rgb(70, 70, 70);
+  font-size: 25px;
+  width: 100%; 
+  max-width: 73%; 
+  margin-bottom: 40px;
+  line-height: 1.6;
+  margin-top: 35px;
+  contain: layout;    
+}
+
+.Home-par button{
+      padding: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-radius: 15px;
+      border: none;
+      font-size: 23px;
+      color: white;
+      background-color: #111111;
+}
+.Home-par button:hover{
+      opacity: 1;
+      background-color: #333333;
+}
+.video-container{
+      width: 50%;
+      height: 100%;
+      position: relative;
+      object-fit: cover;
+      color: white;
+      font-family: 'afacad',sans-serif;
+      text-decoration: none;
+}
+.video-container a{
+      color: white;
+}
+.video-container video{
+      filter: contrast(1.1);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      object-position: 50% 50%;
+      transform: translateZ(0);
+      will-change: transform;
+      
+}
+.Home-Container img{
+      width: 650px;
+      border-radius: 15px;
+      height: 43%;
+      object-fit: cover;
+}
+
+.first-image,
+.second-image{
+      visibility: hidden;
+}
+
+
+.video-des{
+      position: absolute;
+      display: flex;
+      width: 92%;
+      justify-content: space-between;
+      bottom: 1%;
+    
+      left: 1%;
+      padding: 15px;
+      padding-left: 5px;
+}
+.video-par{
+      display: flex;
+}
+
+.arrow{
+    position: absolute;
+    
+    margin-right: 5px;
+    width: 50px;
+  height: 50px;
+    transform: translate(-5rem);
+    border: none;
+    opacity: 0;
+    transition: transform .4s, opacity .2s;
+}
+
+
+
+.PausePlay-btn{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 25px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      border-radius: 100%;
+      border: none;
+      background-color: #111111;
+      color: white;
+      font-size: 18px;
+}
+
+.PausePlay-btn:hover{
+      background: #333333;
+      opacity: 1;
+}
+
+.video-container:hover{
+      cursor: pointer;
+}
+.Shop-now{
+      transition: transform .5s
+}
+.Shop-now h1{
+      font-family: 'afacad';
+      font-size: 40px;
+      max-width: 75%;
+}
+
+.video-container:hover .arrow{
+      transform: rotate(0deg);
+      cursor: pointer;
+      opacity: 1;
+      
+}
+
+.video-container:hover .Shop-now {
+      transform: translateX(70px);
+    }
+
+@media screen and (max-width : 1440px){
+      .Home-par h3{width: 100%;margin-top: 15px;margin-bottom: 20px;}
+      
+}
+
+@media screen and (max-width : 1200px){
+      .Heading{font-size: 45px;}
+      .Home-par h3{font-size: 20px;}
+      .Home-par button{
+            font-size: 20px;
+      }
+      .video-par{
+            font-size: 15px;
+      }
+      .Shop-now h1{
+            font-size: 35px;
+            
+      }
+      .scroller {
+            font-size: 25px;
+      }
+}
+
+@media screen and (max-width : 900px){
+      .Heading{
+            font-size: 35px;
+            line-height: 55px;
+            
+      }
+      .Home-par h3{
+            line-height: 30px;
+      
+      }
+      .Home-par button{
+            padding: 10px;
+            font-size: 18px;
+      }
+      .Shop-now h1{
+            font-size: 28px;
+            
+      }
+      
+}
+
+@media screen and (max-width : 800px){
+    .Home{
+      margin-bottom: 50px;
+    }
+    .Home-par{
+      margin-bottom: 10px;
+    }
+      .Home-Container{
+      gap: 2.5%;
+      flex-direction: column;
+      width: 100%;
+      height: max-content;
+      margin-top: 60px;
+      align-items: center;
+      max-height: none;
+    }
+    .Heading{
+      line-height: 55px;
+      font-size: 40px;
+    }
+    .Home-par h3{
+     
+      max-width: 100%;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .Home-par button{
+      padding: 15px;
+      font-size: 20px;
+    }
+    .Home-par-container{
+      width: 80%;
+      text-align: center;
+     
+    }
+    .video-container{
+      width: 100%;
+      height: 400px;
+    }
+    .Sub-heading{
+      display: flex;
+      justify-content: center;
+    }
+    .video-container video{
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 25px;
+    }
+}
+
+
+@media screen and (max-width : 414px){
+      .Home-par{
+            padding: 0px;
+      }
+}
