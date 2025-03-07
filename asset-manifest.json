@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Stoxy/static/css/main.76794256.css",
+    "main.js": "/Stoxy/static/js/main.23bee225.js",
+    "static/css/734.e81c569d.chunk.css": "/Stoxy/static/css/734.e81c569d.chunk.css",
+    "static/js/734.fa39a002.chunk.js": "/Stoxy/static/js/734.fa39a002.chunk.js",
+    "static/js/938.c59185f7.chunk.js": "/Stoxy/static/js/938.c59185f7.chunk.js",
+    "static/js/211.913d6733.chunk.js": "/Stoxy/static/js/211.913d6733.chunk.js",
+    "static/js/696.dd2b36b7.chunk.js": "/Stoxy/static/js/696.dd2b36b7.chunk.js",
+    "static/media/H-Video.webm": "/Stoxy/static/media/H-Video.eaf75b913c9ce6c91f6e.webm",
+    "static/media/Heart.jpg": "/Stoxy/static/media/Heart.5870e41fa7aef348bc72.jpg",
+    "static/media/Heart.png": "/Stoxy/static/media/Heart.01bec138135ef2b6a144.png",
+    "static/media/bag.svg": "/Stoxy/static/media/bag.5f78d09b3745edbc9567b0c7d75961db.svg",
+    "static/media/Heart.svg": "/Stoxy/static/media/Heart.d088ec4658298a5db8ae7a03391cd37f.svg",
+    "index.html": "/Stoxy/index.html",
+    "static/media/Profile.svg": "/Stoxy/static/media/Profile.9319951244c46b62be588077713f6314.svg",
+    "static/media/Cart.svg": "/Stoxy/static/media/Cart.9f7c7ab6909733a50a2f3e7fb28e448b.svg",
+    "static/media/close.svg": "/Stoxy/static/media/close.71614cf0d0c116dc05f28981e6e699c5.svg",
+    "static/media/burger.svg": "/Stoxy/static/media/burger.3d8db99dc14bc32ec13ae347bb682bce.svg",
+    "static/media/search (2).svg": "/Stoxy/static/media/search (2).4a6595726ec5a132754c43347d6be9ed.svg",
+    "main.76794256.css.map": "/Stoxy/static/css/main.76794256.css.map",
+    "main.23bee225.js.map": "/Stoxy/static/js/main.23bee225.js.map",
+    "734.e81c569d.chunk.css.map": "/Stoxy/static/css/734.e81c569d.chunk.css.map",
+    "734.fa39a002.chunk.js.map": "/Stoxy/static/js/734.fa39a002.chunk.js.map",
+    "938.c59185f7.chunk.js.map": "/Stoxy/static/js/938.c59185f7.chunk.js.map",
+    "211.913d6733.chunk.js.map": "/Stoxy/static/js/211.913d6733.chunk.js.map",
+    "696.dd2b36b7.chunk.js.map": "/Stoxy/static/js/696.dd2b36b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76794256.css",
+    "static/js/main.23bee225.js"
+  ]
+}
