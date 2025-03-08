@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-
+import Productimageholder from '../Assets/images/product.jpg';
 function ProductCard({ product }) {
 
  
@@ -56,7 +56,7 @@ const handleTouchEnd = (e) => {
       >
         <a href={`/product/${product.id}`}>
           <img
-            src={product.images[currentIndex] ?? 'default-image.jpg'}
+            src={product.images[currentIndex] ?? {Productimageholder}}
             alt={product.title}
             loading="lazy"
           />

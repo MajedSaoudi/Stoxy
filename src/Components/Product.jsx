@@ -2,7 +2,7 @@ import React from 'react';
 import './Product.css';
 import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import Productimageholder from '../Assets/images/product.jpg';
 
 
 export function useProducts() {
@@ -42,7 +42,7 @@ export default function Product(){
       return (
       <div key={product.id} className='Product-Container'>
         <div className='Product-Card'>
-        <div><Link to={`/product/${product.id}`}><img src={product.images[0]} alt={product.title} /></Link></div>
+        <div><Link to={`/product/${product.id}`}><img src={product.images[0] ?? {Productimageholder}} alt={product.title} /></Link></div>
         <p>{product.title}</p>
         <p>{product.price}$</p>
       </div>

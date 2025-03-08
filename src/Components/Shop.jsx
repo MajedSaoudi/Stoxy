@@ -9,6 +9,7 @@ import Favourite from '../Assets/images/Heart.svg';
 import { Link } from 'react-router-dom';
 import search from '../Assets/images/search (2).svg';
 import Footer from './Footer';
+import Productimageholder from '../Assets/images/product.jpg';
 export function Shop() {
 
   const { categoryName } = useParams();
@@ -418,7 +419,7 @@ export function Shop() {
                       <Link to={`/product/${product.id}`} onClick={() => {
                         window.scrollTo(0, 0);
                       }}>
-                        <img src={product.images[0]} alt={product.title} onLoad={() => handleImageLoad()} loading={index < 4 ? "eager" : "lazy"}/>
+                        <img src={product.images[0] ?? {Productimageholder}} alt={product.title} onLoad={() => handleImageLoad()} loading={index < 4 ? "eager" : "lazy"}/>
                       </Link>
                       {!imageLoaded && <div className='image-loading skeleton'></div>}
 

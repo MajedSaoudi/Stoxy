@@ -9,7 +9,7 @@ import Navbar from './Navbar';
 import { useCart } from './CartContext';
 import fav from '../Assets/images/Heart.jpg';
 import favblack from '../Assets/images/Heart.png';
-
+import Productimageholder from '../Assets/images/product.jpg';
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from './Footer';
 
@@ -239,7 +239,11 @@ export default function ProductDetail() {
                                         <Link to={`/product/${product.id}`} onClick={() => {
                                             window.scrollTo(0, 0);
                                         }}>
-                                            <img src={product.images[0]} alt="" loading="lazy" />
+                                            <img
+                                                      src={product.images[currentIndex] ?? {Productimageholder}}
+                                                      alt={product.title}
+                                                      loading="lazy"
+                                                    />
 
                                             <div className='recommended-card-details'>
                                                 <h2>{product.title}</h2>

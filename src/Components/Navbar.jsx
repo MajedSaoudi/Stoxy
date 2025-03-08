@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from 'react-router-dom';
 import LoginButton from './login';
+import Productimageholder from '../Assets/images/product.jpg';
 import LogoutButton from './Logout';
 import burger from '../Assets/images/burger.svg';
 import profile from '../Assets/images/Profile.svg';
@@ -204,7 +205,7 @@ function Navbar({ backgroundColor }) {
                 return (
                   <div className='cart-item' key={index}>
                     <div className='cart-item-details'>
-                      <img src={product.images[0]} alt='' className='cart-item-image' />
+                      <img src={product.images[0] ?? {Productimageholder}} alt='' className='cart-item-image' />
                       <div className='cart-item-info'>
                         <h4>{product.title}</h4>
                         <b>Price: {product.amount * product.price}$</b>
@@ -254,12 +255,16 @@ function Navbar({ backgroundColor }) {
 
                   {SearchedProduct.slice(0, 4).map((product) =>
 
-                  (
+                  {
+                    if(!product.images || product.images.length === 0 ){
+                      return null;
+                    }  
+                    return(
                     <>
                       <a href={`/product/${product.id}`} onClick={() => setShowSearch(false)} className='search-item-container'>
                         <div className='search-item' key={product.id}>
 
-                          <img src={product.images[0]} alt='' className='cart-item-image' />
+                          <img src={product.images[0] ?? {Productimageholder}} alt='' className='cart-item-image' />
                           <div className='Search-item-details'>
                             <h3>{product.title}</h3>
                             <p className='searched-description'>{product.description.substr(0, 25)}...</p>
@@ -273,9 +278,9 @@ function Navbar({ backgroundColor }) {
 
                     </>
 
+                   );
 
-
-                  ))}
+                  })}
 
                   <div className='Search-buttons'>
                     <a href='/Shop/All'>

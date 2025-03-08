@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./FPage.css";
 import Navbar from "./Navbar";
+import Productimageholder from '../Assets/images/product.jpg';
 import { useCart } from "./CartContext";
 import { Link } from "react-router-dom";
 function FPage() {
@@ -29,7 +30,7 @@ function FPage() {
                 return (
                 <div className="favourite-Card" key={item.id}>
                   <a href={`/Product/${item.id}`}>
-                  <img src={item.images[0]} alt={item.title} /> 
+                  <img src={item.images[0] ?? {Productimageholder}} alt={item.title} /> 
                   <h5>{item.title}</h5>
                   <p>£{item.price}</p>
                   </a>
