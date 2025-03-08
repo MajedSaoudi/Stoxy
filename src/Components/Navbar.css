@@ -134,7 +134,9 @@
   border: solid #fdffff;
   
 }
-
+.product-hr{
+  margin-top: 5px!important;
+}
 .cart-item-image {
   width: 70px;
   height: 70px;

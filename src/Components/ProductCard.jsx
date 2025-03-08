@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Productimageholder from '../Assets/images/product.jpg';
 function ProductCard({ product }) {
 
@@ -54,13 +55,13 @@ const handleTouchEnd = (e) => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <a href={`/product/${product.id}`}>
+        <Link to={`/product/${product.id}`}>
           <img
             src={product.images[currentIndex] ?? {Productimageholder}}
             alt={product.title}
             loading="lazy"
           />
-        </a>
+        </Link>
         <button className="left-slide" onClick={slideLeft}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,12 +108,12 @@ const handleTouchEnd = (e) => {
         </button>
         <button className="New-btn">New</button>
       </div>
-      <a href={`/product/${product.id}`}>
+      <Link to={`/product/${product.id}`}>
         <h2>{product.title}</h2>
-      </a>
-      <a href={`/Shop/${product.category.name}`}>
+      </Link>
+      <Link to={`/Shop/${product.category.name}`}>
         <p>{product.category.name}</p>
-      </a>
+      </Link>
     </div>
   );
 }

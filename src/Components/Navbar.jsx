@@ -20,7 +20,6 @@ import Favourite from '../Assets/images/Heart.svg';
 
 
 
-
 function Navbar({ backgroundColor }) {
   const [isOpen, setIsOpen] = useState(false);
   const [chartisOpen, setChartIsOpen] = useState(false);
@@ -124,25 +123,25 @@ function Navbar({ backgroundColor }) {
             <div className='menu'>
               <div className="shop-container">
 
-                <a onClick={() => {
+                <Link onClick={() => {
                   handleLinkClick()
-                }} className='shop' href='/Shop/All'><p>Shop <span><i class="arrow down"></i></span></p></a>
+                }} className='shop' to='/Shop/All'><p>Shop <span><i class="arrow down"></i></span></p></Link>
                 <ul className='shop-dropdown' style={{
 
                   backgroundColor: backgroundColor || 'white',
                 }}>
-                  <li><a href="/Shop/Electronics">Electronics </a></li>
-                  <li><a href={`/Shop/Furniture`}>Furniture </a></li>
-                  <li><a href="/Shop/Clothes">Clothes </a></li>
-                  <li><a href="/Shop/Shoes">Shoes </a></li>
+                  <li><Link to="/Shop/Electronics">Electronics </Link></li>
+                  <li><Link to={`/Shop/Furniture`}>Furniture </Link></li>
+                  <li><Link to="/Shop/Clothes">Clothes </Link></li>
+                  <li><Link to="/Shop/Shoes">Shoes </Link></li>
 
                 </ul>
               </div>
               <div className="shop-container">
-                <a href="/About"><p>About Us</p></a>
+                <Link to="/About"><p>About Us</p></Link>
               </div>
               <div className="shop-container">
-                <a href="/Contact"><p>Contact</p></a>
+                <Link to="/Contact"><p>Contact</p></Link>
               </div>
 
 
@@ -150,9 +149,9 @@ function Navbar({ backgroundColor }) {
 
           </div>
           <div className='Logo'>
-            <a href='/Stoxy'>
+            <Link to='/'>
               <h1>Stoxy</h1>
-            </a>
+            </Link>
           </div>
           <div className='information'>
             <div className='search-container'>
@@ -168,7 +167,7 @@ function Navbar({ backgroundColor }) {
               }}>
 
                 <img src={cart} alt="Cart Icon" />
-                <p className='cart-num'>{cartcount}</p>
+                <p className='cart-num'>{cartcount !== undefined ? cartcount : '0'}</p>
               </div>
             </div>
 
@@ -197,12 +196,13 @@ function Navbar({ backgroundColor }) {
 
             {cartcontent.length > 0 ? (
               cartcontent.map((product, index) => {
-                // Check if product.images exists and is not empty
+           
                 if (!product.images || product.images.length === 0) {
-                  return null; // Skip rendering this product
+                  return null; 
                 }
 
                 return (
+                  <>
                   <div className='cart-item' key={index}>
                     <div className='cart-item-details'>
                       <img src={product.images[0] ?? {Productimageholder}} alt='' className='cart-item-image' />
@@ -214,7 +214,10 @@ function Navbar({ backgroundColor }) {
                     <div className='remove-container'>
                       <img src={Remove} className='Trash-png' onClick={() => RemoveFromCart(product.id)} />
                     </div>
+                   
                   </div>
+                   <hr className='product-hr'/>
+                   </>
                 );
               })
             ) : (
@@ -223,11 +226,11 @@ function Navbar({ backgroundColor }) {
           </div>
 
         </div>
-        <p>Subtotal : £{calculateSubtotal()}.00</p>
+        <p>Subtotal : £{calculateSubtotal() !== undefined ? calculateSubtotal() : '0'}.00</p>
         <hr></hr>
         <div className='cart-buttons'>
           <button className='close-btn' onClick={() => setChartIsOpen(!chartisOpen)}>Close</button>
-          <a ><button className='Checkout-btn'>Checkout</button></a>
+          <Link ><button className='Checkout-btn'>Checkout</button></Link>
         </div>
 
       </div>
@@ -261,7 +264,7 @@ function Navbar({ backgroundColor }) {
                     }  
                     return(
                     <>
-                      <a href={`/product/${product.id}`} onClick={() => setShowSearch(false)} className='search-item-container'>
+                      <Link to={`/product/${product.id}`} onClick={() => setShowSearch(false)} className='search-item-container'>
                         <div className='search-item' key={product.id}>
 
                           <img src={product.images[0] ?? {Productimageholder}} alt='' className='cart-item-image' />
@@ -273,7 +276,7 @@ function Navbar({ backgroundColor }) {
 
                         </div>
                         <hr></hr>
-                      </a>
+                      </Link>
 
 
                     </>
@@ -283,11 +286,11 @@ function Navbar({ backgroundColor }) {
                   })}
 
                   <div className='Search-buttons'>
-                    <a href='/Shop/All'>
+                    <Link to='/Shop/All'>
                       <button className='search-close-btn' >
                         See All Products
                       </button>
-                    </a>
+                    </Link>
                   </div>
 
 
@@ -308,18 +311,18 @@ function Navbar({ backgroundColor }) {
       <div className={`Menu ${isOpen ? 'show' : ''}`}>
         <div>
           <div>
-            <a onClick={() => setIsOpen(false)}
-              href="/Shop/All">Shop</a>
+            <Link onClick={() => setIsOpen(false)}
+              to="/Shop/All">Shop</Link>
           </div>
-          <a onClick={() => setIsOpen(false)}
-            href="/Shop/Clothes">Clothes</a>
-          <a onClick={() => setIsOpen(false)}
-            href="/Shop/Shoes"> Shoes</a>
-          <a onClick={() => setIsOpen(false)}
-            href="/Shop/Electronics">Electronics</a>
+          <Link onClick={() => setIsOpen(false)}
+            to="/Shop/Clothes">Clothes</Link>
+          <Link onClick={() => setIsOpen(false)}
+            to="/Shop/Shoes"> Shoes</Link>
+          <Link onClick={() => setIsOpen(false)}
+            to="/Shop/Electronics">Electronics</Link>
         </div>
-        <a onClick={() => setIsOpen(false)} href='/About'>About Us</a>
-        <a onClick={() => setIsOpen(false)} href='/Contact'>Contact</a>
+        <Link onClick={() => setIsOpen(false)} to='/About'>About Us</Link>
+        <Link onClick={() => setIsOpen(false)} to='/Contact'>Contact</Link>
       </div>
       <div className={`Profile-Dropdown ${ProfileIsOpened ? 'show' : ''}`}>
         <div>

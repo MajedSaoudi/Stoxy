@@ -48,13 +48,13 @@ export default function Category() {
               <>
                 <div key={category.name} className='category-tab'>
                   <div className='category-images' key={category.id}>
-                  <a href={`/Shop/${category.name}`} >
+                  <Link to={`/Shop/${category.name}`} >
                     <img src={category.image} loading="lazy"/>
 
                     <div className='category-names' >
                       <h1>{category.name}</h1>
                       <h1>&gt;</h1>
-                    </div></a>
+                    </div></Link>
                   </div>
                 </div>
               </>

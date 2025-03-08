@@ -15,7 +15,7 @@ function FPage() {
           <div>
             <h1>Favourite</h1>
             <div className='path'>
-              <Link to='/Stoxy'><p>Home</p></Link><span>&#x276F;</span>
+              <Link to='/'><p>Home</p></Link><span>&#x276F;</span>
               <p className='current-page'>Favourite</p>
             </div>
           </div>
@@ -29,11 +29,11 @@ function FPage() {
                 }
                 return (
                 <div className="favourite-Card" key={item.id}>
-                  <a href={`/Product/${item.id}`}>
+                  <Link to={`/Product/${item.id}`}>
                   <img src={item.images[0] ?? {Productimageholder}} alt={item.title} /> 
                   <h5>{item.title}</h5>
                   <p>£{item.price}</p>
-                  </a>
+                  </Link>
                   <button className="close-btn" onClick={() => RemoveFav(item.id)}>Remove</button>
                 </div>
                 );

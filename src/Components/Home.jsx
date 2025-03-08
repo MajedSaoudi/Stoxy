@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback, Suspense } from 'react';
 import './Home.css';
 import Video from '../Assets/images/H-Video.webm';
-
+import { Link } from 'react-router-dom';
 
 const ScrollVelocity = React.lazy(() => import('./ScrollVelocity'));
 const SplitText = React.lazy(() => import('./SplitText'));
@@ -42,13 +42,13 @@ export default function Home() {
               <div className='Sub-heading'>
               <h3>Discover curated fashion and home decor blending elegance with functionality. Shop our latest collections to elevate your space with timeless pieces.</h3>
               </div>
-              <a href='/Shop/All'>
+              <Link to='/Shop/All'>
                 <button>Shop Now</button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className='video-container'>
-            <a href='/Shop/All'>
+            <Link to='/Shop/All'>
               <video
                 autoPlay
                 ref={videoRef}
@@ -76,7 +76,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
             <button className='PausePlay-btn' onClick={togglePlayPause}>
               {isPlaying ? '❚❚' : '▶'}
             </button>

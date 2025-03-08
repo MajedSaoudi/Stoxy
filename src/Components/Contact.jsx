@@ -42,7 +42,7 @@ export default function Contact() {
           <div>
             <h1>Contact Us</h1>
             <div className='path'>
-              <Link to='/Stoxy'><p>Home</p></Link><span>&#x276F;</span>
+              <Link to='/'><p>Home</p></Link><span>&#x276F;</span>
               <p className='current-page'>Contact Us</p>
             </div>
           </div>

@@ -96,9 +96,9 @@ export default function ProductDetail() {
             <div className='Path-container'>
                 <div className='Path'>
 
-                    <a href='/Stoxy'><p>Home</p></a><span>&#x276F;</span>
-                    <a href='/Shop/All'><p>Shop</p></a><span>&#x276F;</span>
-                    <a href={`/Shop/${Product.category.name}`}><p>{Product.category.name}  <span>&#x276F;</span></p></a>
+                    <Link to='/'><p>Home</p></Link><span>&#x276F;</span>
+                    <Link to='/Shop/All'><p>Shop</p></Link><span>&#x276F;</span>
+                    <Link to={`/Shop/${Product.category.name}`}><p>{Product.category.name}  <span>&#x276F;</span></p></Link>
                     <h4>{Product.title}</h4>
 
                 </div>
@@ -224,7 +224,7 @@ export default function ProductDetail() {
                 <div>
                     <div className='Header-name'>
                         <h1>Other products : </h1>
-                        <a href='/Shop/All'>View All</a>
+                        <Link to='/Shop/All'>View All</Link>
                     </div>
                     <div className='recommended-products'>
 

@@ -7,7 +7,7 @@ function Favourite() {
         <div>
           <h1>About Us</h1>
           <div className='path'>
-            <Link to='/Stoxy'><p>Home</p></Link><span>&#x276F;</span>
+            <Link to='/'><p>Home</p></Link><span>&#x276F;</span>
             <p className='current-page'>About</p>
           </div>
         </div>

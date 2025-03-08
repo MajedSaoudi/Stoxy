@@ -179,7 +179,7 @@ export function Shop() {
         <div>
           <h1>SHOP</h1>
           <div className='path'>
-            <Link to='/Stoxy'><p>Home</p></Link><span>&#x276F;</span>
+            <Link to='/'><p>Home</p></Link><span>&#x276F;</span>
             <p className='current-page'>Shop</p>
           </div>
 
@@ -335,7 +335,7 @@ export function Shop() {
 
 
             <div className="Filter-buttons">
-              <a
+              <Link
                 onClick={() => {
                   setFilter('All');
                   setCurrentPage(1);
@@ -345,8 +345,8 @@ export function Shop() {
                 } : {}}
               >
                 All
-              </a>
-              <a
+              </Link>
+              <Link
 
                 onClick={() => {
                   setFilter('Clothes');
@@ -358,8 +358,8 @@ export function Shop() {
                 } : {}}
               >
                 Clothes
-              </a>
-              <a
+              </Link>
+              <Link
                 onClick={() => {
                   setFilter('Electronics');
                   setCurrentPage(1);
@@ -369,8 +369,8 @@ export function Shop() {
                 } : {}}
               >
                 Electronics
-              </a>
-              <a
+              </Link>
+              <Link
                 onClick={() => {
                   setFilter('Furniture');
                   setCurrentPage(1);
@@ -380,8 +380,8 @@ export function Shop() {
                 } : {}}
               >
                 Furniture
-              </a>
-              <a
+              </Link>
+              <Link
                 onClick={() => {
                   setFilter('Shoes');
                   setCurrentPage(1);
@@ -391,8 +391,8 @@ export function Shop() {
                 } : {}}
               >
                 Shoes
-              </a>
-              <a
+              </Link>
+              <Link
                 onClick={() => {
                   setFilter('Miscellaneous');
                   setCurrentPage(1);
@@ -403,7 +403,7 @@ export function Shop() {
                 } : {}}
               >
                 Miscellaneous
-              </a>
+              </Link>
             </div>
             
 
