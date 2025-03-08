@@ -5,7 +5,9 @@ html{
       font-display: swap;
 }
 
-
+.HomePage{
+      scroll-behavior: smooth;
+}
 .Home{
      width: 100vw;
      min-height: 100vh;

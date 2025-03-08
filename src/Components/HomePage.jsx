@@ -48,7 +48,7 @@ useEffect(() => {
 
     useEffect(() => {
       const lenis = new Lenis({
-        lerp: 0.08, 
+        lerp: 0.07, 
         smooth: true, 
       });
     
@@ -58,7 +58,12 @@ useEffect(() => {
       }
     
       requestAnimationFrame(raf);
-    
+      const handleClick = () => {
+        lenis.stop(); 
+       
+      };
+  
+      document.addEventListener('click', handleClick);
     
       return () => {
         if (lenis) {

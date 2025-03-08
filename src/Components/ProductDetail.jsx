@@ -12,7 +12,7 @@ import favblack from '../Assets/images/Heart.png';
 import Productimageholder from '../Assets/images/product.jpg';
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from './Footer';
-
+import { Helmet } from 'react-helmet';
 
 export default function ProductDetail() {
     const notify = () => toast.success('Successfully Added!');
@@ -89,7 +89,7 @@ export default function ProductDetail() {
         }
     }
 
-    
+
     return (
         <>
             <Navbar backgroundColor="white" />
@@ -104,6 +104,11 @@ export default function ProductDetail() {
                 </div>
             </div>
             <div className='ProductDetail'>
+                <Helmet>
+                    {Product.images.map((image, index) => (
+                        <link key={index} rel="preload" href={image} as="image" />
+                    ))}
+                </Helmet>
                 <div className='Product-Details-container'>
                     <div className='ProductDetails-image-figure'>
                         <div className='mini-images-container'>
@@ -200,15 +205,15 @@ export default function ProductDetail() {
                             }
                             } className='Addtocart-btn' >Add to Cart</button>
                             <Toaster position="top-center" toastOptions={{
-                               
+
                                 style: {
-                               
-                                    
-                                    marginTop:'60px'
+
+
+                                    marginTop: '60px'
                                 },
 
-            
-                            
+
+
                             }} />
                             <button className='Addtofav-btn'>Checkout Now</button>
                         </div>
@@ -229,41 +234,41 @@ export default function ProductDetail() {
                     <div className='recommended-products'>
 
                         {limitedProducts.map((product) => {
-                            if(!product.images || product.images.length === 0 ){
+                            if (!product.images || product.images.length === 0) {
                                 return null;
                             }
                             return (
-                            <>
-                                <div className='recommended-products-card'>
-                                    <div>
-                                        <Link to={`/product/${product.id}`} onClick={() => {
-                                            window.scrollTo(0, 0);
-                                        }}>
-                                            <img
-                                                      src={product.images[currentIndex] ?? {Productimageholder}}
-                                                      alt={product.title}
-                                                      loading="lazy"
-                                                    />
+                                <>
+                                    <div className='recommended-products-card'>
+                                        <div>
+                                            <Link to={`/product/${product.id}`} onClick={() => {
+                                                window.scrollTo(0, 0);
+                                            }}>
+                                                <img
+                                                    src={product.images[0] ?? { Productimageholder }}
+                                                    alt={product.title}
+                                                    loading="lazy"
+                                                />
 
-                                            <div className='recommended-card-details'>
-                                                <h2>{product.title}</h2>
+                                                <div className='recommended-card-details'>
+                                                    <h2>{product.title}</h2>
 
-                                                <h3>£{product.price}</h3>
+                                                    <h3>£{product.price}</h3>
 
 
-                                            </div>
-                                        </Link>
+                                                </div>
+                                            </Link>
+                                        </div>
                                     </div>
-                                </div>
-                            </>
+                                </>
                             );
                         })}
 
                     </div>
                 </div>
             </div>
-          
-            <Footer/>
+
+            <Footer />
         </>
     )
 }

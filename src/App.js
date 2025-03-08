@@ -9,9 +9,14 @@ import FPage from './Components/FPage';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import { Routes, Route } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 function App() {
+  const location = useLocation();
 
-
+  useEffect(() => {
+    console.log('Current Path:', location.pathname); 
+    setTimeout(() => window.scrollTo(0, 0), 0);
+  }, [location.pathname]);
 
 
   return (

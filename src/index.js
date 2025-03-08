@@ -13,7 +13,7 @@ import CartProvider from './Components/CartContext';
 
 const Domain = process.env.REACT_APP_Domain;
 const ClientId = process.env.REACT_APP_Clientid;
-const redirectUri = window.location.origin + "/Stoxy";
+const redirectUri = process.env.REACT_APP_BASE_URL;
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
