@@ -202,7 +202,7 @@ function Navbar({ backgroundColor }) {
                 }
 
                 return (
-                  <>
+                  <React.Fragment key={index}>
                   <div className='cart-item' key={index}>
                     <div className='cart-item-details'>
                       <img src={product.images[0] ?? {Productimageholder}} alt='' className='cart-item-image' />
@@ -217,7 +217,7 @@ function Navbar({ backgroundColor }) {
                    
                   </div>
                    <hr className='product-hr'/>
-                   </>
+                   </React.Fragment>
                 );
               })
             ) : (

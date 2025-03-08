@@ -7,22 +7,34 @@ function CartProvider({ children }) {
   const [cartcount, setCartCount] = useState(0);
   const [favouriteitems, setFavouriteItems] = useState([]);
 
-  
+  // Initialize cart and favourites from localStorage
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cartcontent')) || [];
     const storedFav = JSON.parse(localStorage.getItem('favouriteitems')) || [];
-    setCartContent(storedCart);
-    setCartCount(storedCart.length); 
-    setFavouriteItems(storedFav);
+
+    if (Array.isArray(storedCart)) {
+      setCartContent(storedCart);
+      setCartCount(storedCart.length);
+    } else {
+      setCartContent([]);
+      setCartCount(0);
+    }
+
+    if (Array.isArray(storedFav)) {
+      setFavouriteItems(storedFav);
+    } else {
+      setFavouriteItems([]);
+    }
   }, []);
 
- 
+  // Update localStorage when cartcontent or favouriteitems change
   useEffect(() => {
     localStorage.setItem('cartcontent', JSON.stringify(cartcontent));
     localStorage.setItem('favouriteitems', JSON.stringify(favouriteitems));
-    setCartCount(cartcontent.length); 
+    setCartCount(cartcontent.length);
   }, [cartcontent, favouriteitems]);
 
+  // Add to cart
   function addtoCart(Product, amount) {
     setCartContent((prev) => {
       const existingProductIndex = prev.findIndex((item) => item.id === Product.id);
@@ -38,14 +50,14 @@ function CartProvider({ children }) {
         return [...prev, { ...Product, amount }];
       }
     });
-   
   }
 
+  // Remove from cart
   function RemoveFromCart(id) {
     setCartContent((prev) => prev.filter((product) => product.id !== id));
-
   }
 
+  // Add to favourites
   function AddToFav(Product) {
     setFavouriteItems((prev) => {
       const exist = prev.findIndex((item) => item.id === Product.id);
@@ -56,6 +68,7 @@ function CartProvider({ children }) {
       }
     });
   }
+
 
   function RemoveFav(id) {
     setFavouriteItems((prev) => prev.filter((item) => item.id !== id));

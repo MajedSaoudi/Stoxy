@@ -58,12 +58,21 @@ useEffect(() => {
       }
     
       requestAnimationFrame(raf);
-      const handleClick = () => {
-        lenis.stop(); 
-       
-      };
+      
+        const handleClick = () => {
+            
+           
+                lenis.stop(); 
+          
+            setTimeout(() => {
+                lenis.start();
+              }, 100);
+          };
+          document.addEventListener('click', handleClick);
+      
+     
   
-      document.addEventListener('click', handleClick);
+      
     
       return () => {
         if (lenis) {
