@@ -238,17 +238,17 @@ export default function ProductDetail() {
                                 return null;
                             }
                             return (
-                                <>
-                                    <div className='recommended-products-card'>
-                                        <div>
-                                            <Link to={`/product/${product.id}`} onClick={() => {
-                                                window.scrollTo(0, 0);
-                                            }}>
-                                                <img
-                                                    src={product.images[0] ?? { Productimageholder }}
-                                                    alt={product.title}
-                                                    loading="lazy"
-                                                />
+                            <>
+                                <div className='recommended-products-card'>
+                                    <div>
+                                        <Link to={`/product/${product.id}`} onClick={() => {
+                                            window.scrollTo(0, 0);
+                                        }}>
+                                            <img
+                                                      src={product.images[0] ?? {Productimageholder}}
+                                                      alt={product.title}
+                                                      loading="lazy"
+                                                    />
 
                                                 <div className='recommended-card-details'>
                                                     <h2>{product.title}</h2>
