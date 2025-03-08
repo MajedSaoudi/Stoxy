@@ -240,7 +240,7 @@ export default function ProductDetail() {
                                             window.scrollTo(0, 0);
                                         }}>
                                             <img
-                                                      src={product.images[currentIndex] ?? {Productimageholder}}
+                                                      src={product.images[0] ?? {Productimageholder}}
                                                       alt={product.title}
                                                       loading="lazy"
                                                     />
