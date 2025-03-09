@@ -3,7 +3,37 @@
 ![Stoxy Banner](https://imgur.com/TqtYRLO.png)
 
 
-Stoxy is a modern e-commerce platform offering curated fashion and home decor products. Built with React, this website provides a seamless shopping experience with smooth animations, responsive design, and intuitive navigation.
+## **Responsive Design**
+![Responsive design](https://imgur.com/oOgWgEh.png)
+The Stoxy website is fully responsive, ensuring a seamless experience across all devices:
+- **Desktop**: Optimized for large screens with a clean and modern layout.
+- **Tablet**: Adjusts gracefully to medium-sized screens.
+- **Mobile**: Designed for small screens with touch-friendly interactions.
+
+### **Key Features of Responsiveness**
+- Flexible grid layouts that adapt to different screen sizes.
+- Media queries to adjust styles for specific devices.
+- Touch-friendly buttons and navigation for mobile users.
+- Optimized images and videos for fast loading on all devices.
+
+### **Testing**
+The website has been tested on:
+- **Chrome**, **Firefox**, **Safari**, and **Edge** browsers.
+- Various devices, including iPhone, iPad, and Android phones.
+- Different screen resolutions (from 320px to 1920px and beyond).
+
+---
+
+### **Screenshots**
+
+#### Desktop
+![Desktop View](https://imgur.com/dzZN3Iv.png)
+
+#### Tablet
+![Tablet View](https://imgur.com/uLUN2g0I.png)
+
+#### Mobile
+![Mobile View](https://imgur.com/UaGC5C6.png)
 
 ---
 
