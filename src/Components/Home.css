@@ -280,6 +280,8 @@ html{
     .video-container video{
       border-top-right-radius: 0px;
       border-bottom-left-radius: 25px;
+      height: 100%;
+      object-fit: cover;
     }
 }
 

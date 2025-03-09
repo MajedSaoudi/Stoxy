@@ -57,7 +57,7 @@ export default function Home() {
                 id="myVideo"
                 onLoadedData={() => setIsLoaded(true)}
                 preload="metadata"
-                playsinline
+                playsInline
                 poster="/path/to/poster-image.jpg"
                 className="svelte-gv32my"
               >

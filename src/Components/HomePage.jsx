@@ -11,39 +11,53 @@ import Footer from './Footer';
 
 function HomePage() {
 
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 802);
 
+    useEffect(() => {
+      const handleResize = () => {
+        setIsDesktop(window.innerWidth >= 802);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
     const location = useLocation();
 
 
 
-useEffect(() => {
-        const timeline = gsap.timeline();
-  
-  
-        timeline.to(".video-container", {
-          scale: 1.5,
-          duration: 0,
-          ease: "linear",
-        });
-        timeline.to(".video-container", {
-          scale: 1,
-          duration: 0.8,
-          ease: "ease",
-          delay:0
-        });
- 
-        timeline.fromTo(
-          ".Header",
-          { opacity: 0, y: -300 },
-          { opacity: 1, y: 0, duration: 0.5, ease: 'linear' },
-          "-=0.5",
-             
-        );
-        
-        
-  
-    }, []);
+    useEffect(() => {
+        if (isDesktop) {
+          const timeline = gsap.timeline();
+    
+          timeline.to(".video-container", {
+            scale: 1.5,
+            duration: 0,
+            ease: "linear",
+          });
+    
+          timeline.to(".video-container", {
+            scale: 1,
+            duration: 0.8,
+            ease: "ease",
+            delay: 0,
+          });
+    
+          timeline.fromTo(
+            ".Header",
+            { opacity: 0, y: -300 },
+            { opacity: 1, y: 0, duration: 0.5, ease: 'linear' },
+            "-=0.5"
+          );
+    
+          return () => {
+            timeline.kill();
+          };
+        }
+      }, [isDesktop]);
 
 
     useEffect(() => {
