@@ -30,7 +30,7 @@ The website has been tested on:
 ![Desktop View](https://imgur.com/dzZN3Iv.png)
 
 #### Tablet
-![Tablet View](https://imgur.com/uLUN2g0I.png)
+![Tablet View](https://imgur.com/LUN2g0I.png)
 
 #### Mobile
 ![Mobile View](https://imgur.com/UaGC5C6.png)
