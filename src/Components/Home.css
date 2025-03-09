@@ -90,6 +90,7 @@ html{
       color: white;
       font-family: 'afacad',sans-serif;
       text-decoration: none;
+      overflow: hidden;
 }
 .video-container a{
       color: white;
@@ -104,7 +105,7 @@ html{
       object-position: 50% 50%;
       transform: translateZ(0);
       will-change: transform;
-      
+ 
 }
 .Home-Container img{
       width: 650px;

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback, Suspense } from 'react
 import './Home.css';
 import Video from '../Assets/images/H-Video.webm';
 import { Link } from 'react-router-dom';
-
+import VideoHolder from'../Assets/images/VideoHolder.png';
 const ScrollVelocity = React.lazy(() => import('./ScrollVelocity'));
 const SplitText = React.lazy(() => import('./SplitText'));
 
@@ -61,7 +61,10 @@ export default function Home() {
                 poster="/path/to/poster-image.jpg"
                 className="svelte-gv32my"
               >
+                <source src={Video} type="video/webm" />
                 <source src={Video} type="video/mp4" />
+                <img src={VideoHolder} alt="Fallback Image" />
+               
               </video>
               <div className='video-des'>
                 <div className='video-par'>
