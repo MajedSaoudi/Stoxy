@@ -1,6 +1,6 @@
 # Stoxy - Fashion & Home Decor E-Commerce Website
 
-![Stoxy Banner](https://imgur.com/a/zNIAxqG)
+![Stoxy Banner]([https://imgur.com/a/zNIAxqG](https://imgur.com/TqtYRLO))
 
 
 Stoxy is a modern e-commerce platform offering curated fashion and home decor products. Built with React, this website provides a seamless shopping experience with smooth animations, responsive design, and intuitive navigation.
@@ -29,10 +29,10 @@ Stoxy is a modern e-commerce platform offering curated fashion and home decor pr
 
 ## **Screenshots**
 
-![Homepage](https://imgur.com/a/zNIAxqG) 
-![Category Page](https://imgur.com/IdkgmHc) 
-![Shop Page](https://imgur.com/a/zNIAxqG) 
-![Favourite Page](https://imgur.com/odVIbme) 
+![Homepage]([https://imgur.com/a/zNIAxqG](https://imgur.com/TqtYRLO)) 
+![Category Page]([https://imgur.com/IdkgmHc](https://imgur.com/poUSgAz)) 
+![Shop Page]([https://imgur.com/a/zNIAxqG](https://imgur.com/IdkgmHc)) 
+![Favourite Page]([https://imgur.com/odVIbme](https://imgur.com/odVIbme)) 
 
 ---
 
