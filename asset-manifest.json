@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Stoxy/static/css/main.09ead3ed.css",
-    "main.js": "/Stoxy/static/js/main.a43f50e1.js",
+    "main.css": "/Stoxy/static/css/main.1e40368d.css",
+    "main.js": "/Stoxy/static/js/main.347ca8f1.js",
     "static/css/734.e81c569d.chunk.css": "/Stoxy/static/css/734.e81c569d.chunk.css",
     "static/js/734.fa39a002.chunk.js": "/Stoxy/static/js/734.fa39a002.chunk.js",
     "static/js/938.c59185f7.chunk.js": "/Stoxy/static/js/938.c59185f7.chunk.js",
@@ -18,8 +18,8 @@
     "static/media/close.svg": "/Stoxy/static/media/close.71614cf0d0c116dc05f28981e6e699c5.svg",
     "static/media/burger.svg": "/Stoxy/static/media/burger.3d8db99dc14bc32ec13ae347bb682bce.svg",
     "static/media/search (2).svg": "/Stoxy/static/media/search (2).4a6595726ec5a132754c43347d6be9ed.svg",
-    "main.09ead3ed.css.map": "/Stoxy/static/css/main.09ead3ed.css.map",
-    "main.a43f50e1.js.map": "/Stoxy/static/js/main.a43f50e1.js.map",
+    "main.1e40368d.css.map": "/Stoxy/static/css/main.1e40368d.css.map",
+    "main.347ca8f1.js.map": "/Stoxy/static/js/main.347ca8f1.js.map",
     "734.e81c569d.chunk.css.map": "/Stoxy/static/css/734.e81c569d.chunk.css.map",
     "734.fa39a002.chunk.js.map": "/Stoxy/static/js/734.fa39a002.chunk.js.map",
     "938.c59185f7.chunk.js.map": "/Stoxy/static/js/938.c59185f7.chunk.js.map",
@@ -27,7 +27,7 @@
     "696.dd2b36b7.chunk.js.map": "/Stoxy/static/js/696.dd2b36b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09ead3ed.css",
-    "static/js/main.a43f50e1.js"
+    "static/css/main.1e40368d.css",
+    "static/js/main.347ca8f1.js"
   ]
 }
