@@ -52,31 +52,33 @@ function Navbar({ backgroundColor }) {
   const [isVisible, setIsVisible] = useState(true);
   const prevScrollY = useRef(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  useEffect(()=>{
+      
+    function handleScroll(){
+      const PageHeight = window.innerHeight;
+      const ScrollwindowY = window.scrollY;  
+      const FullHeight = document.documentElement.scrollHeight;
+      const isatBottom = PageHeight + ScrollwindowY >= FullHeight - 10;
 
-      if (currentScrollY > prevScrollY.current) {
 
-        setIsVisible(false);
-      } else {
-
+      if(isatBottom){
+        setIsVisible(true);
+      } else if (ScrollwindowY > prevScrollY.current ){
+        setIsVisible(false)
+      }else{
         setIsVisible(true);
       }
 
-
-
-      prevScrollY.current = currentScrollY;
-
-    };
+       prevScrollY.current = ScrollwindowY;
+    }
 
     window.addEventListener("scroll", handleScroll);
 
+    return ()=>{
+      window.removeEventListener("scroll", handleScroll)
+    }
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  })
 
   function handleSearchOpen() {
     setShowSearch(!showsearch);

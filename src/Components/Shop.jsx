@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import search from '../Assets/images/search (2).svg';
 import Footer from './Footer';
 import Productimageholder from '../Assets/images/product.jpg';
+
 export function Shop() {
 
   const { categoryName } = useParams();

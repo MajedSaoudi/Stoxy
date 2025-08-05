@@ -8,7 +8,8 @@
     min-height: 35vh;
     width: 100vw;
     font-display: swap;
-    background-color: #424141;
+    border-top: solid 1px rgb(92, 86, 86);
+    background-color: white;
     
 }
 .footer h3{
