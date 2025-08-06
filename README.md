@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Stoxy - Fashion & Home Decor E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Stoxy Banner](https://imgur.com/TqtYRLO.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+## **Responsive Design**
+![Responsive design](https://imgur.com/oOgWgEh.png)
+The Stoxy website is fully responsive, ensuring a seamless experience across all devices:
+- **Desktop**: Optimized for large screens with a clean and modern layout.
+- **Tablet**: Adjusts gracefully to medium-sized screens.
+- **Mobile**: Designed for small screens with touch-friendly interactions.
 
-### `npm start`
+### **Key Features of Responsiveness**
+- Flexible grid layouts that adapt to different screen sizes.
+- Media queries to adjust styles for specific devices.
+- Touch-friendly buttons and navigation for mobile users.
+- Optimized images and videos for fast loading on all devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Testing**
+The website has been tested on:
+- **Chrome**, **Firefox**, **Safari**, and **Edge** browsers.
+- Various devices, including iPhone, iPad, and Android phones.
+- Different screen resolutions (from 320px to 1920px and beyond).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### **Screenshots**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Desktop
+![Desktop View](https://imgur.com/dzZN3Iv.png)
 
-### `npm run build`
+#### Tablet
+![Tablet View](https://imgur.com/LUN2g0I.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Mobile
+![Mobile View](https://imgur.com/UaGC5C6.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Features**
 
-### `npm run eject`
+- **Smooth Animations**: Powered by GSAP and Lenis for a delightful user experience.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Shopping Cart**: Add, remove, and manage items in your cart.
+- **Favorites**: Save your favorite products for later.
+- **Category Pages**: Browse products by category.
+- **Video Background**: Engaging video background on the homepage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Technologies Used**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Frontend**: React, React Router, GSAP, Lenis
+- **Styling**: CSS, Media Queries
+- **Deployment**: Vercel / Netlify / GitHub Pages
+- **Other Tools**: Git, npm/yarn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## **Screenshots**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Homepage](https://imgur.com/TqtYRLO.png)
+![Category Page](https://imgur.com/poUSgAz.png)
+![Shop Page](https://imgur.com/IdkgmHc.png)
+![Favourite Page](https://imgur.com/odVIbme.png) 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## **Installation**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Follow these steps to set up the project locally:
 
-### Analyzing the Bundle Size
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/majedsaoudi/stoxy.git
+   cd stoxy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
